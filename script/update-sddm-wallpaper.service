@@ -1,0 +1,6 @@
+[Unit]
+Description=Update SDDM wallpaper with remote copy
+[Service]
+ExecStart=/usr/local/sbin/update-sddm-wallpaper.sh
+[Install]
+WantedBy=multi-user.target
