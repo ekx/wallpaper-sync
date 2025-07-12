@@ -1,7 +1,8 @@
 #!/bin/bash
 
 IMAGE_URL="https://wallpaper.bede.re/wallpaper.png"
-SAVE_PATH="/tmp/wallpaper.png"
+USER=$(ls /home)
+SAVE_PATH="/home/$USER/Pictures/wallpaper.png"
 RETRY_DELAY=5
 
 while true; do
@@ -13,8 +14,8 @@ while true; do
     fi
 done
 
-USER=$(ls /home)
-runuser -u $USER -- /usr/bin/plasma-apply-wallpaperimage /tmp/wallpaper.png
-#qdbus org.kde.ScreenLocker /ScreenLocker org.kde.ScreenLocker.SetWallpaperFromFile "/tmp/wallpaper.png"
 
-cp /tmp/wallpaper.png /usr/share/sddm/themes/breeze/wallpaper.png
+runuser -u $USER -- /usr/bin/plasma-apply-wallpaperimage $SAVE_PATH
+#qdbus org.kde.ScreenLocker /ScreenLocker org.kde.ScreenLocker.SetWallpaperFromFile $SAVE_PATH
+
+cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.png
