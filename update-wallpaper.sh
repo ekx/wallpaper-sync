@@ -16,6 +16,6 @@ done
 
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $USER)/bus"
 runuser -u $USER -- /usr/bin/plasma-apply-wallpaperimage $SAVE_PATH
-runuser -u $USER -- kwriteconfig5 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://$SAVE_PATH"
+runuser -u $USER -- kwriteconfig6 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://$SAVE_PATH"
 
 cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.png || true
