@@ -20,4 +20,4 @@ done
 runuser -u $USER -- /usr/bin/plasma-apply-wallpaperimage $SAVE_PATH
 #qdbus org.kde.ScreenLocker /ScreenLocker org.kde.ScreenLocker.SetWallpaperFromFile $SAVE_PATH
 
-cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.png
+cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.png || true
