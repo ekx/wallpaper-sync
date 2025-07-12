@@ -5,6 +5,8 @@ USER=$(ls /home)
 SAVE_PATH="/home/$USER/Pictures/wallpaper.png"
 RETRY_DELAY=5
 
+export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u $USER)/bus"
+
 while true; do
     wget -q -N -O "$SAVE_PATH" "$IMAGE_URL"
     if [ $? -eq 0 ]; then
