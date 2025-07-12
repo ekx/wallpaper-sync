@@ -13,7 +13,7 @@ while true; do
     fi
 done
 
-USER=$(logname)
+USER=$(ls /home)
 runuser -u $USER -- /usr/bin/plasma-apply-wallpaperimage /tmp/wallpaper.png
 #qdbus org.kde.ScreenLocker /ScreenLocker org.kde.ScreenLocker.SetWallpaperFromFile "/tmp/wallpaper.png"
 
