@@ -1,0 +1,11 @@
+[Unit]
+Description=Wallpaper Sync Service
+After=suspend.target hibernate.target hybrid-sleep.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/update-wallpaper.sh
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target
