@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5
+
 IMAGE_URL="https://wallpaper.bede.re/wallpaper.png"
 USER=$(ls /home)
 SAVE_PATH="/home/$USER/Pictures/wallpaper.png"
