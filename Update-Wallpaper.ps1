@@ -15,10 +15,12 @@ do {
     }
 } while (-not $success)
 
+# PowerShell Module PSVirtualDesktop needed: https://github.com/MScholtes/PSVirtualDesktop
 foreach ($user in (Get-ChildItem -Path C:\Users)) {
     $Env:PSModulePath += ";$($user.FullName)\Documents\PowerShell\Modules"
 }
 Set-AllDesktopWallpapers $destinationPath
 
+# ImageGlass command line tool needed: https://github.com/d2phap/ImageGlass
 $igcmd = "C:\Tools\ImageGlass\igcmd.exe"
 &$igcmd set-lock-screen $destinationPath
