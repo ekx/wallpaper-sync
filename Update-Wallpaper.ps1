@@ -1,9 +1,9 @@
 Start-Sleep -Seconds 5
 
-$imageUrl = "https://wallpaper.bede.re/wallpaper.png"
+$imageUrl = "https://wallpaper.bede.re/wallpaper.webp"
 
 $picturesFolder = [System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::MyPictures)
-$destinationPath = Join-Path $picturesFolder "wallpaper.png"
+$destinationPath = Join-Path $picturesFolder "wallpaper.webp"
 
 $success = $false
 do {

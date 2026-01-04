@@ -2,9 +2,9 @@
 
 sleep 5
 
-IMAGE_URL="https://wallpaper.bede.re/wallpaper.png"
+IMAGE_URL="https://wallpaper.bede.re/wallpaper.webp"
 USER=$(who | awk 'NR==1{print $1}')
-SAVE_PATH="/home/$USER/Pictures/wallpaper.png"
+SAVE_PATH="/home/$USER/Pictures/wallpaper.webp"
 RETRY_DELAY=5
 
 # Try downloading wallpaper until it succeeds
@@ -35,7 +35,7 @@ if [[ -e "/usr/bin/plasma-apply-wallpaperimage" ]]; then
 
     # Update SDDM wallpaper
     if [[ $EUID -eq 0 ]]; then
-        cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.png || true
+        cp $SAVE_PATH /usr/share/sddm/themes/breeze/wallpaper.webp || true
     fi
 else
     # Update Gnome wallpaper
