@@ -1,0 +1,11 @@
+[Unit]
+Description=Download and set wallpaper daily
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+AccuracySec=1us
+RandomizedDelaySec=10min
+
+[Install]
+WantedBy=timers.target
