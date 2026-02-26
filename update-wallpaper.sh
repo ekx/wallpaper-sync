@@ -3,7 +3,7 @@
 sleep 5
 
 IMAGE_URL="https://wallpaper.bede.re/wallpaper.webp"
-USER=$(who | awk 'NR==1{print $1}')
+USER=$(id -u -n 1000)
 SAVE_PATH="/home/$USER/Pictures/wallpaper.webp"
 RETRY_DELAY=5
 
